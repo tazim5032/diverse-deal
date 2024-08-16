@@ -6,6 +6,7 @@ import { IoEyeOffSharp } from "react-icons/io5";
 import { FiEye } from "react-icons/fi";
 import { useState } from "react";
 import useAuth from "../Hook/useAuth";
+import SocialLogIn from "../Components/SocialLogIn";
 
 const Register = () => {
 
@@ -123,6 +124,12 @@ const Register = () => {
                 data-aos="zoom-in"
                 data-aos-duration="500">Already have an account?
                 <Link className="text-blue-600 font-bold" to="/login"> Login</Link> </p>
+
+                <div className="md:w-3/4 lg:w-1/2 mx-auto pb-6"
+                data-aos="zoom-in"
+                data-aos-duration="1000">
+                <SocialLogIn ></SocialLogIn>
+            </div>
         </div>
     );
 };

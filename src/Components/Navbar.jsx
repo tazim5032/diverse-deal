@@ -39,9 +39,9 @@ const Navbar = () => {
                 </div>
                 <div className='flex-1'>
                     <Link to='/' className='flex gap-2 items-center'>
-                        <img className='w-auto h-7 rounded-2xl' src='https://i.ibb.co/1JLyW2S/logo1.png' alt='' />
-                        <p className='sm:text-2xl font-bold text-white'>Edu
-                                <span className="text-red-600 sm:text-2xl">Flow</span>
+                        {/* <img className='w-auto h-7 rounded-2xl' src='https://i.ibb.co/1JLyW2S/logo1.png' alt='' /> */}
+                        <p className='sm:text-2xl font-bold text-white'>Diverse
+                                <span className="text-red-600 sm:text-2xl">Deal</span>
                         </p>
                     </Link>
                 </div>
@@ -77,7 +77,7 @@ const Navbar = () => {
 
             <div className="navbar-end gap-1 text-center" style={{ zIndex: 10 }}>
             <div>
-                        <NavLink className={({ isActive }) => isActive ? 'text-red-500 font-bold border border-yellow-500 p-2 sm:mr-2 rounded' : 'font-bold p-2 sm:mr-2 rounded text-black'} to="/"><a>Home</a></NavLink>
+                        {/* <NavLink className={({ isActive }) => isActive ? 'text-red-500 font-bold border border-yellow-500 p-2 sm:mr-2 rounded' : 'font-bold p-2 sm:mr-2 rounded text-black'} to="/"><a>Home</a></NavLink> */}
                     </div>
 
                 {
