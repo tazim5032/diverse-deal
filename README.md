@@ -1,6 +1,6 @@
 # DiverseDeal
 
-[Live Website](https://your-live-site-link.com)
+[Live Website](https://test-3b907.web.app)
 
 DiverseDeal is an e-commerce website focused on showcasing and selling mobile phones, tablets, and watches from various brands. The website allows users to search, categorize, and sort products, providing a seamless shopping experience.
 
