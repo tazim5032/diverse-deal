@@ -24,7 +24,7 @@ const ProductCard = ({ product }) => {
                     <div className="card-actions justify-end text-teal-500 font-bold mt-4">
                         <p className="text-xl">${product?.price}</p>
                         <button className="btn bg-teal-500 text-white text-lg border-none hover:bg-teal-800">
-                            
+                            Buy Now
                         </button>
                     </div>
                 </div>
