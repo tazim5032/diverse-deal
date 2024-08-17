@@ -23,7 +23,7 @@ const ProductCard = ({ product }) => {
                     <p className="mt-2">{product?.description.substring(0, 100)}...</p>
                     <div className="card-actions justify-end text-teal-500 font-bold mt-4">
                         <p className="text-xl">${product?.price}</p>
-                        <button className="btn bg-teal-500 text-white text-lg border-none hover:bg-teal-800">
+                        <button className="btn bg-cyan-500 text-white text-lg border-none hover:bg-teal-800">
                             Buy Now
                         </button>
                     </div>

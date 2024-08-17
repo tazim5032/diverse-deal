@@ -22,19 +22,7 @@ const Navbar = () => {
                            
 
                         </li>
-                        {/* {
-                            user ?
 
-                                <li>
-
-                                    <NavLink className={({ isActive }) => isActive ? 'text-red-500 font-bold border border-yellow-500 p-2 sm:mr-2 rounded' : 'font-bold p-2 sm:mr-2 rounded text-black'} to="/user-profile"><a>Profile</a></NavLink>
-                                </li>
-
-
-                                : <div>
-                                    
-                                </div>
-                        } */}
                     </ul>
                 </div>
                 <div className='flex-1'>
@@ -58,19 +46,7 @@ const Navbar = () => {
                         'text-red-500 font-bold border border-yellow-500 p-2 sm:mr-2 rounded' : 'font-bold p-2 sm:mr-2 rounded text-black'} to="/"><a>Home</a></NavLink>
 
                     </div>
-                    {/* {
-                        user ?
-
-                            <div>
-
-                                <NavLink className={({ isActive }) => isActive ? 'text-red-500 font-bold border border-yellow-500 p-2 sm:mr-2 rounded' : 'font-bold p-2 sm:mr-2 rounded text-black'} to="/user-profile"><a>Profile</a></NavLink>
-                            </div>
-
-
-                            : <div>
-                            </div>
-                    } */}
-
+                   
                 </ul>
             </div>
 
