@@ -22,7 +22,7 @@ const Navbar = () => {
                            
 
                         </li>
-                        {
+                        {/* {
                             user ?
 
                                 <li>
@@ -34,7 +34,7 @@ const Navbar = () => {
                                 : <div>
                                     
                                 </div>
-                        }
+                        } */}
                     </ul>
                 </div>
                 <div className='flex-1'>
@@ -58,7 +58,7 @@ const Navbar = () => {
                         'text-red-500 font-bold border border-yellow-500 p-2 sm:mr-2 rounded' : 'font-bold p-2 sm:mr-2 rounded text-black'} to="/"><a>Home</a></NavLink>
 
                     </div>
-                    {
+                    {/* {
                         user ?
 
                             <div>
@@ -69,7 +69,7 @@ const Navbar = () => {
 
                             : <div>
                             </div>
-                    }
+                    } */}
 
                 </ul>
             </div>
