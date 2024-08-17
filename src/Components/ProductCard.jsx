@@ -1,9 +1,9 @@
 const ProductCard = ({ product }) => {
     return (
         <div className="transition-transform transform hover:scale-105 duration-300">
-            <div className="card bg-base-100 w-96 shadow-xl">
-                <figure className="w-full h-[300px]">
-                    <img className="h-full w-full object-cover"
+            <div className="card bg-base-100 w-90 shadow-xl">
+                <figure className="w-full h-[400px]">
+                    <img className="h-full w-96 object-cover"
                         src={product?.image}
                         alt={product?.name || "Product Image"} />
                 </figure>

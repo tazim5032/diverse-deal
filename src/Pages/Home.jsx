@@ -104,7 +104,7 @@ const Home = () => {
                 <div className=" flex flex-col items-center gap-5 mt-10">
                     <p className="text-xl font-semibold">Select Your Category</p>
                     <select onChange={handleSelectCategory} value={category} className="py-3 px-5 bg-cyan-500 text-white ">
-                        <option value="">Select an option</option>
+                        <option value="">Select a Category</option>
                         <option value="mobile">Mobile</option>
                         <option value="tab">Tab</option>
                         <option value="watch">Watch</option>
@@ -140,7 +140,7 @@ const Home = () => {
 
 
             <div className="pt-10">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 min-h-screen">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 min-h-screen">
                     {
                         products?.map(product => <ProductCard key={product._id} product={product}></ProductCard>)
                     }
