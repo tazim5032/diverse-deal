@@ -4,8 +4,9 @@ import useAxiosPublic from "../Hook/useAxiosPublic";
 import { ScaleLoader } from "react-spinners";
 import ProductCard from "../components/ProductCard";
 import { useEffect, useState } from "react";
-import { GrCaretNext, GrCaretPrevious } from "react-icons/gr";
+import { GrCaretNext, GrCaretPrevious, GrSearch } from "react-icons/gr";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { FcOk } from "react-icons/fc";
 
 const Home = () => {
     const axiosPublic = useAxiosPublic();
@@ -69,7 +70,7 @@ const Home = () => {
         setMax(e.target.max.value);
     }
 
-    console.log(typeof(min));
+    console.log(typeof (min));
 
     if (isLoading) {
         <div>
@@ -79,20 +80,34 @@ const Home = () => {
         </div>
     }
     return (
-        <div className="mt-[100px] container mx-auto">
+        <div className="pt-36 container mx-auto">
 
             <div>
                 <form onSubmit={handleSubmit} className="flex flex-col md:flex-row  items-center justify-center gap-5">
                     <div>
                         <input name="search" className="w-full py-3 px-5 border-cyan-300 border outline-none" type="text" placeholder="Search by product name" />
                     </div>
-                    <button className="btn bg-cyan-500 border-none text-white text-lg hover:bg-cyan-800">Go <FaArrowRightLong /></button>
+                    <button className="btn bg-cyan-500 border-none text-white text-lg hover:bg-cyan-800"> <GrSearch /></button>
                 </form>
             </div>
 
             <div className="flex items-center flex-wrap  justify-evenly">
+
+                <div className="flex flex-col items-center gap-5 mt-10">
+                    <form onSubmit={handlePrice} className="flex flex-col md:flex-row  items-center justify-center gap-5">
+                        <div>
+                            <p className="text-xl font-semibold mb-3">Min Price</p>
+                            <input name="min" className="w-full py-3 px-5 border-cyan-300 border outline-none" type="number" placeholder="Min" />
+                        </div>
+                        <div>
+                            <p className="text-xl font-semibold mb-3">Max Price</p>
+                            <input name="max" className="w-full py-3 px-5 border-cyan-300 border outline-none" type="number" placeholder="Max" />
+                        </div>
+                        <button className="btn bg-cyan-200 border-none lg:mt-10 md:mt-10 text-white text-2xl hover:bg-cyan-800"> <FcOk /></button>
+                    </form>
+                </div>
                 <div className=" flex flex-col items-center gap-5 mt-10">
-                    <p className="text-xl font-semibold">Select Your Brand</p>
+                    <p className="text-xl font-semibold">Brand</p>
                     <select onChange={handleSelectBrand} value={brand} className="py-3 px-5 bg-cyan-500 text-white ">
                         <option value="">Select a Brand</option>
                         <option value="samsung">Samsung</option>
@@ -102,7 +117,7 @@ const Home = () => {
                     </select>
                 </div>
                 <div className=" flex flex-col items-center gap-5 mt-10">
-                    <p className="text-xl font-semibold">Select Your Category</p>
+                    <p className="text-xl font-semibold">Category</p>
                     <select onChange={handleSelectCategory} value={category} className="py-3 px-5 bg-cyan-500 text-white ">
                         <option value="">Select a Category</option>
                         <option value="mobile">Mobile</option>
@@ -111,23 +126,11 @@ const Home = () => {
 
                     </select>
                 </div>
-                <div className="flex flex-col items-center gap-5 mt-10">
-                    <form onSubmit={handlePrice} className="flex flex-col md:flex-row  items-center justify-center gap-5">
-                        <div>
-                            <p className="text-xl font-semibold mb-3">Min Price</p>
-                            <input name="min" className="w-full py-3 px-5 border-cyan-300 border outline-none" type="number"  placeholder="Min" />
-                        </div>
-                        <div>
-                            <p className="text-xl font-semibold mb-3">Max Price</p>
-                            <input name="max" className="w-full py-3 px-5 border-cyan-300 border outline-none" type="number"  placeholder="Max" />
-                        </div>
-                        <button className="btn bg-cyan-500 border-none lg:mt-10 md:mt-10 text-white text-lg hover:bg-cyan-800">Go <FaArrowRightLong /></button>
-                    </form>
-                </div>
+
             </div>
 
             <div className=" flex flex-col items-center gap-5 mt-10">
-                <p className="text-xl font-semibold">Sort by product Price</p>
+                <p className="text-xl font-semibold">Sort by </p>
                 <select onChange={handleSelectChange} value={selectedOption} className="py-3 px-5 bg-cyan-500 text-white ">
                     <option value="">Select an option</option>
                     <option value="low">Low to High</option>
@@ -147,7 +150,7 @@ const Home = () => {
                 </div>
                 <div className="flex justify-center items-center mt-5">
                     <button onClick={() => handlePageChange(page - 1)} disabled={page === 1} className="btn mr-2"><GrCaretPrevious /></button>
-                   
+
                     <span className="flex gap-4 ">
                         {
                             pages?.map((pageNo) => <button onClick={() => {
