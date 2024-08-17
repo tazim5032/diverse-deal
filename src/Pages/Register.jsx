@@ -1,4 +1,3 @@
-import Helmet from "react-helmet";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -59,9 +58,7 @@ const Register = () => {
 
     return (
         <div className=" mx-[1%] md:mx[10%] lg:mx-[20%] rounded-xl border-2 pt-24">
-            <Helmet>
-                <title>Register</title>
-            </Helmet>
+            
             <h1 className="text-2xl text-center my-10 pt-6">Please Register</h1>
 
             <form onSubmit={handleSubmit(onSubmit)} className="md:w-3/4 lg:w-1/2 mx-auto"

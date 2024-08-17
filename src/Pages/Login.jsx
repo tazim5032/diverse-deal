@@ -1,6 +1,5 @@
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Helmet from "react-helmet";
 import { useState } from "react";
 import { IoEyeOffSharp } from "react-icons/io5";
 import { FiEye } from "react-icons/fi";
@@ -54,9 +53,6 @@ const Login = () => {
     return (
 
         <div className=" mx-[1%] md:mx[10%] lg:mx-[20%] rounded-xl border-2 pt-24">
-            <Helmet>
-                <title>Login</title>
-            </Helmet>
             <h1 className="text-2xl text-center my-10 pt-6">Please Login</h1>
 
             <form onSubmit={handleSubmit(onSubmit)} className="md:w-3/4 lg:w-1/2 mx-auto"
