@@ -1,6 +1,6 @@
 const ProductCard = ({ product }) => {
     return (
-        <div className="transition-transform transform hover:scale-105 duration-300">
+        <div className="transition-transform transform duration-300">
             <div className="card bg-base-100 w-90 shadow-xl">
                 <figure className="w-full h-[400px]">
                     <img className="h-full w-96 object-cover"
