@@ -53,7 +53,7 @@ const Login = () => {
 
     return (
 
-        <div className=" mx-[1%] md:mx[10%] lg:mx-[20%] rounded-xl border-2 mt-24">
+        <div className=" mx-[1%] md:mx[10%] lg:mx-[20%] rounded-xl border-2 pt-24">
             <Helmet>
                 <title>Login</title>
             </Helmet>
